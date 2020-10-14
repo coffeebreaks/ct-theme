@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+    margin: 0px;
+}
+
+.navbar-brand {
+    height: 7rem;
+    display: flex;
+    justify-content: space-around;
+    background: #1b4ea4;
+    align-items: center;
+}
+
+.navbar-menu {
+
+    width: 50%;
+
+}
+
+
+
+
+.navbar-start.has-text-centered {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.navbar-item  {
+    font-family: "Oswald";
+    color: white;
+    text-decoration: none;
+}
+
+.dropdownWrapper {
+    position: relative;
+}
+.dropdown {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    color: blue;
+
+
+}
+
+.dropdown a {
+    border-bottom: solid rgb(165, 165, 165) 1px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    background: white;
+    font-family: "Oswald";
+
+}
+
+
+/* Hoverstyles */
+
+
+
+.navbar-burger.burger {
+    background: red;
+    width: 100px;
+    height: 100px;
+}
+
+.is-active   {
+    background: red;
+    display: flex !important;
+    position: relative;
+}
+
+.navbar-burger.burger {
+    background: #e67325;
+    border-radius: 5px;
+    width: 50px;
+    display: none;
+    height: 50px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.navbar-burger.burger span {
+    background: #ffffff;
+    height: 6px;
+    margin: 0px 4px;
+}
+
+/* media queries */
+
+@media (max-width: 960px ) {
+    .navbar-menu  {
+        display: none;
+    }
+
+    .navbar-burger.burger {
+        display: flex;
+    }
+
+
+}
+
+
+.dropdownWrapper:hover > .dropdown {
+    display: flex;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import logo from '../img/logo.png'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -42,10 +42,58 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <img src={logo} alt="Kaldi" style={{ width: '288px', height: "auto" }} />
             </Link>
             {/* Hamburger menu */}
-            <div
+        
+
+            <div id="navMenu" className={`navbar-menu ${this.state.navBarActiveClass}`}>
+            <div className="navbar-start has-text-centered">
+            <Link className="navbar-item" to="/">
+                Start
+              </Link>
+              <Link className="navbar-item" to="/about">
+                Skorstensrenovering
+              </Link>
+              <Link className="navbar-item" to="/products">
+                Imkanal
+              </Link>
+              <Link className="navbar-item" to="/blog">
+                Ventilation
+              </Link>
+              <div className="dropdownWrapper">
+              <Link className="navbar-item" to="/contact">
+                Produkter ▾ 
+              </Link>
+              <div className="dropdown">
+                <Link to="/about">
+                Linkasdasd
+                </Link>
+                <Link to="/">
+                Linkasdasdfasf
+                </Link>
+                <Link to="/">
+                Linkasd
+                </Link>
+                <Link to="/">
+                Link
+                </Link>
+              </div>
+              </div>
+
+              <Link className="navbar-item" to="/contact/examples">
+                Information
+              </Link>
+              <Link className="navbar-item" to="/contact/examples">
+                Om oss
+              </Link>
+              <Link className="navbar-item" to="/contact/examples">
+                Kontakta oss
+              </Link>
+            </div>
+
+          </div>
+          <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
@@ -54,42 +102,11 @@ const Navbar = class extends React.Component {
               <span />
               <span />
             </div>
+    
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
-          </div>
+          
         </div>
+       
       </nav>
     )
   }
