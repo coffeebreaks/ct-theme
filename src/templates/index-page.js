@@ -16,28 +16,42 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <div className="full-width-image margin-top-0" style={{ backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`,backgroundPosition: `top left`,backgroundAttachment: `center`, height: "800px",}}>
-      <div style={{display: 'flex',height: '150px',lineHeight: '1',justifyContent: 'space-around',alignItems: 'left',flexDirection: 'column',}}>
-        <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen" >
+  
+    <div className="full-width-image margin-top-0" style={{ backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`,}}>
+      
+      
+<div className="flexbox">
+      <h4 style={{color: "white"}}>
+          {subheading}
+        </h4>
+     
+        <h1 style={{color: "white"}}>
           {title}
         </h1>
-        <h3 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-          {subheading}
-        </h3>
-      </div>
+        
+        <p style={{color: "white"}}>
+        Insatsrör i vattenbaserad komposit för relining av alla typer av rökkanaler och ventilationskanaler
+        </p>
+        <div className="flexbox" style={{flexDirection: "row" }}>
+        <button className="btn-primary" style={{marginRight: "2rem"}}> SE INSTALLATIONSVIDEO</button>
+        <button className="btn-clear"> KONTAKTA OSS</button>
+        </div>
+
+</div>
     </div>
     <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
+     
+        
             <div className="column is-10 is-offset-1">
-              <div className="content">
+         
                 <div className="content">
                   <div className="tile">
                     <h1 className="title">{mainpitch.title}</h1>
                   </div>
                   <div className="tile">
+                    <p>desc</p>
                     <h3 className="subtitle">{mainpitch.description}</h3>
+<p>{mainpitch.text}</p>
                   </div>
                 </div>
                 <div className="columns">
@@ -68,10 +82,10 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+           
+          
+        
+     
     </section>
   </div>
 )
@@ -133,7 +147,9 @@ export const pageQuery = graphql`
         mainpitch {
           title
           description
+          text
         }
+        
         description
         intro {
           blurbs {

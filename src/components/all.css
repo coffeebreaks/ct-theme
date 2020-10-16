@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 body {
     margin: 0px;
+    font-family: "Open Sans";
 }
 
 .navbar-brand {
@@ -14,11 +16,44 @@ body {
 
 .navbar-menu {
 
-    width: 50%;
+    margin: auto;
 
 }
 
+h1,h2,h3,h4,h5 {
+    margin: 0px;
+    padding: 0px;
+}
 
+h1 {
+    font-size: 80px;
+    font-family: "Oswald";
+    font-weight: 600;
+    line-height: 6rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: "Oswald";
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: "Oswald";
+}
+
+h4 {
+    font-size: 1rem;
+    letter-spacing: 0.4rem;
+    font-weight: normal;
+    font-family: "Oswald";
+}
+
+p,ul,li,a {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 1.2rem;
+}
 
 
 .navbar-start.has-text-centered {
@@ -29,9 +64,10 @@ body {
 }
 
 .navbar-item  {
-    font-family: "Oswald";
-    color: white;
+    color: #f4f1ff;
     text-decoration: none;
+    font-size: 1rem;
+    margin: 0rem 0.5rem;
 }
 
 .dropdownWrapper {
@@ -42,18 +78,27 @@ body {
     display: none;
     flex-direction: column;
     color: blue;
-
-
 }
 
-.dropdown a {
+.dropdown a, .dropdown a:visited {
     border-bottom: solid rgb(165, 165, 165) 1px;
     padding: 1rem 2rem;
     text-decoration: none;
-    background: white;
-    font-family: "Oswald";
-
+    background: #f4f1fc;
+    color: #1b4ea4;
+    font-size: inherit;
 }
+
+.full-width-image {
+    height: 621px;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    padding: 4rem;
+    align-items: center;
+}
+
 
 
 /* Hoverstyles */
@@ -88,6 +133,42 @@ body {
     margin: 0px 4px;
 }
 
+button {
+    border: none;
+    margin: 0;
+    padding: 1rem;
+    outline: 1px solid #d5d5ef;
+    width: auto;
+    overflow: visible;
+    background: #1b4ea4;
+    color: #d5d5ef;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.btn-clear {
+    background: none;
+}
+
+.flexbox {
+    width: 682px;
+    display: flex;
+    flex-direction: column;
+}
+
+.overImage {
+    max-width: 682px;
+}
+
+
 /* media queries */
 
 @media (max-width: 960px ) {
@@ -105,4 +186,8 @@ body {
 
 .dropdownWrapper:hover > .dropdown {
     display: flex;
+}
+
+section.section.section--gradient {
+    margin: 5rem;
 }
